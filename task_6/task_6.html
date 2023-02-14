@@ -2,16 +2,13 @@
 <script>
     const numOrStr = prompt('input number or string');
 
-    switch (numOrStr) {
-        case '0':
-            alert('You canceled');
-            break;
-        case '':
+    switch (true) {
+        case (numOrStr === null || numOrStr === ''):
             alert('Empty String');
             break;
-        case 'String':
-            alert('number is Ba_NaN');
-            break;
+        case (isNaN(numOrStr)):
+            alert('Numder is Ba_NaN');
+            break;  
         default:
             alert('Ok!');
             break;
